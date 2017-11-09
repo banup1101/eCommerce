@@ -1,0 +1,118 @@
+<!doctype html>
+	<html>
+		<head>
+				<title> This Is Not Amazon	</title>
+			<style>
+				img{width: 300px;
+					}
+				
+				input {width: 25px;
+					}
+				span{
+					color: green;
+					font: 1.5;
+					}
+				body{
+					 background: linear-gradient(to right, #ff3333 , #ff9933, #ffff4d, #33ff33, #66d9ff, #d966ff);
+					}
+				h2{
+					color:purple
+					
+
+					
+			</style>
+				<script>
+				function purchase1(){
+					var amount = parseFloat(document.getElementById("Quantity1").value);
+					var build = "";
+					if (amount <=20 && amount>0){
+						var price = amount * 499.99;
+						var tax =  price * 0.0875;
+						var total = price + tax;
+						var result1 = document.getElementById("result");
+						var totalAmt = tax + price;
+						build += "Subtotal: " + price + "<br>";
+						build += "	   Tax: " + tax.toFixed(2) + "<br>";
+						build += "   Total: " + total.toFixed(2) + "<br>";
+					}
+					else if (amount >20){
+						var result1 = document.getElementById("result");
+						build += "only 20 in stock";
+					}
+				result1.innerHTML = build;
+					
+				}
+				function purchase2(){
+					var amount = parseFloat(document.getElementById("Quantity2").value);
+					var build = "";
+					if (amount<=20 && amount>0){
+						var price = amount * 299.99;
+						var tax =  price * 0.0875;
+						var total = price + tax;
+						var result2 = document.getElementById("result2");
+						var totalAmt = tax + price;
+						build += "Subtotal: " + price + "<br>";
+						build += "	   Tax: " + tax.toFixed(2) + "<br>";
+						build += "   Total: " + total.toFixed(2) + "<br>";
+					}
+					else if (amount >20){
+						var result2 = document.getElementById("result2");
+						build += "only 20 in stock";
+					}
+				result2.innerHTML = build;
+					
+				}
+			
+				function purchase3(){
+					var amount = parseFloat(document.getElementById("Quantity3").value);
+					var build = "";
+					if (amount <=20 && amount > 0){
+						var price = amount * 399.99;
+						var tax =  price * 0.0875;
+						var total = price + tax;
+						var result3 = document.getElementById("result3");
+						var totalAmt = tax + price;
+						build += "Subtotal: " + price + "<br>";
+						build += "	   Tax: " + tax.toFixed(2) + "<br>";
+						build += "   Total: " + total.toFixed(2) + "<br>";
+					}
+					else if (amount >20){
+						var result3 = document.getElementById("result3");
+						build += "only 20 in stock";
+					}
+				result3.innerHTML = build;
+					
+				}
+	
+				</script>
+		</head>
+		<body>
+			<div>
+				<h2> Fake Amazon </h2>
+				<h1> Dell Computer </h1>
+				<img src="computer.jpg" ><br>
+				<span>$499.99 </span>  
+				<p> Awesome PC 10/10 IGN </p>
+				Quantity:<input type="text" id="Quantity1" > 
+			<br> <button onclick="purchase1()">PURCHASE HERE</button>
+				<div id="result"></div>
+				
+				<h1> Playstation 4 </h1>
+				<img src="playstation.png" ><br>
+				<span>$299.99 </span>  
+				<p> Awesome Playstation </p>
+				Quantity:<input type="text" id="Quantity2" >
+			<br> <button onclick="purchase2()">PURCHASE HERE</button>
+				<div id="result2"></div>
+				
+				<h1> Apple Watch </h1>
+				<img src="applewatch.jpg" ><br>
+				<span>$399.99 </span>  
+				<p> Awesome Apple Watch </p>
+				Quantity:<input type="text" id="Quantity3" >
+			<br> <button onclick="purchase3()">PURCHASE HERE</button>
+				<div id="result3"></div>
+	
+			</div>
+		</body>
+	</html>
